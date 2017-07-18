@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const restAPI = new vsts.WebApi(
-	tl.getEndpointUrl('SYSTEMVSSCONNECTION', false),
+	tl.getVariable('System.TeamFoundationCollectionUri'),
 	vsts.getPersonalAccessTokenHandler(tl.getEndpointAuthorizationParameter('SYSTEMVSSCONNECTION', 'ACCESSTOKEN', false))
 );
 
